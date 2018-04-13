@@ -1,9 +1,10 @@
-class ListsController < ApplicationController
+class ListsController < ProtectedController
   before_action :set_list, only: [:show, :update, :destroy]
 
   # GET /lists
   def index
-    @lists = List.current_user.lists.all
+    @lists = current_user.lists.all
+    # @lists = List.current_user.lists.all
 
     render json: @lists
   end
