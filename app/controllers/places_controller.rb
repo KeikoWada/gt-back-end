@@ -10,7 +10,8 @@ class PlacesController < ProtectedController
 
   # GET /places/1
   def show
-    render json: current_user.places.find(params[:address])
+    render json: @place
+    # current_user.places.find(params[:address])
   end
 
   # POST /places
