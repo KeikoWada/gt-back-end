@@ -4,7 +4,6 @@ class ListsController < ProtectedController
   # GET /lists
   def index
     @lists = current_user.lists.all
-    # @lists = List.current_user.lists.all
 
     render json: @lists
   end
@@ -16,8 +15,7 @@ class ListsController < ProtectedController
 
   # POST /lists
   def create
-     @list = current_user.lists.build(list_params)
-    # @list = List.new(list_params)
+    @list = current_user.lists.build(list_params)
 
     if @list.save
       render json: @list, status: :created
@@ -44,11 +42,10 @@ class ListsController < ProtectedController
     # Use callbacks to share common setup or constraints between actions.
     def set_list
       @list = current_user.lists.find(params[:id])
-      # @list = List.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def list_params
-      params.require(:list).permit(:place_name, :address, :discriptione, :user_id)
+      params.require(:list).permit(:name, :category, :address, :description, :user_id)
     end
 end
