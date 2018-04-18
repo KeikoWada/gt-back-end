@@ -46,8 +46,6 @@ if I am a user
 ## problem-solving strategy
 broke down each problem to smaller issues and tackled them piece by piece
 
-## A catalog of routes (paths and methods) that the API expects
-
 ## Installation instructions for any dependencies
 ### npm:
 google-maps: Wrapper for asynchronously used Google Maps API in browser.
@@ -63,6 +61,7 @@ This module does not change original google maps api in any way. It just provide
 - Roads API
 - Time Zone API
 
+## A catalog of routes (paths and methods) that the API expects
  ### API End Points
  | Verb   | URI Pattern            | Controller#Action |
  |--------|------------------------|-------------------|
