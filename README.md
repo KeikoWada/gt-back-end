@@ -5,43 +5,23 @@ Heroku deployed site: https://great-time.herokuapp.com/
 
 Front-end deployed site: http://www.keikowada.com/gt-front-end/
 
-Entity Relationship Diagram (ERD):https://i.imgur.com/0rGMDpQ.jpg
+Entity Relationship Diagram (ERD):
 
-## user stories
-if I am a user
+![alt text](https://i.imgur.com/ulaW0KZ.png)
 
-- I want to be able to save my email address and password
-- I want to be able to sign-in with the email and password that I registered before
-- I want to be able to change my password
-- I want to be able to sign-out
-- I want to be able to create the list
-- I want to be able to upload the picture
-- I want to be able to select the address from google map
-- I want to be able to check the list I once created
-- I want to be able to edit (add/delete lists/ or edit dates)
-- I want to be able to search the lis
 
 ## List of technologies used
-- Jquery
-- javascript
-- Ajax
-- grunt serve
-- grunt deploy
-- node
-- Gith
-- Github
-- boostrap
-- handlebars
+- Ruby
+- Ruby on Rails
 
 ## List unsolved problems which would be fixed in future iterations.
 - Interact with AWS
-- Populate the markers of all places in his/her lists when user typed area/clicks the area on map
+- To populate all "favorite places" markers in the areas where users search by address (area)
 
 ## Planning and process
-- make user story
-- make lists of each required action according to the user stories.
-- Plan the time frame
-- writing the code
+I first made user stories and time schedules.
+I first planned to work on the back-end of the project, followed by the front-end. After all of the requirements were done, I then worked on  using third party APIs (googleMap APIs).
+The time schedule helped me prioritize things.
 
 ## problem-solving strategy
 broke down each problem to smaller issues and tackled them piece by piece
@@ -73,4 +53,3 @@ This module does not change original google maps api in any way. It just provide
  | POST   | `/places`              | `places#create`   |
  | GET    | `/places/:id`          | `places#show`     |
  | PATCH  | `/places/:id`          | `places#update`   |
- | GET    | `/places/:id/watch`    | `places#watch`    |
